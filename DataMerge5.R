@@ -23,8 +23,7 @@ transaction_full = read.csv("transaction_data.csv")
 #Campaign 18 was sent to the most households (1133), followed by 13 (1077) and then 8 (1076)
 as.data.frame(table(campaign_table$CAMPAIGN)) 
 
-#Code from Shannon to get rid of outliers (deletes 2 observations)
-#Jenny - plot to look for outliers
+
 transaction_full <- transaction_full[transaction_full$SALES_VALUE <= 600,]
 
 selectedProd <- subset(product, product$DEPARTMENT=="GROCERY", select = c("PRODUCT_ID","BRAND")) #39021 observations
